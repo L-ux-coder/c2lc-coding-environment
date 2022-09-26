@@ -72,12 +72,20 @@ export default class ArduinoDriver implements RobotDriver {
         return this.sendCommand([0x01]);
     }
 
-    left(): Promise<void> {
+    left45(): Promise<void> {
         return this.sendCommand([0x03]);
     }
-
-    right(): Promise<void> {
+	
+    left90(): Promise<void> {
+        return this.sendCommand([0x05]);
+    }
+	
+	right45(): Promise<void> {
         return this.sendCommand([0x02]);
+    }
+	
+    right90(): Promise<void> {
+        return this.sendCommand([0x06]);
     }
 
     backward(): Promise<void> {

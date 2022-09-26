@@ -98,6 +98,26 @@ void loop() {
                     servo2.write(86);
                     notificationCharacteristic.writeValue((byte)0x02);
                 }
+                else if (commandCharacteristic.value() == 5){
+                  Serial.println("Right 90 degrees");
+                  notificationCharacteristic.writeValue((byte)0x01);
+                  servo1.write(-180);
+                  servo2.write(-180);
+                  delay(code_speed*2);
+                  servo1.write(89);
+                  servo2.write(86);
+                  notificationCharacteristic.writeValue((byte)0x02);
+                  }
+                  else if (commandCharacteristic.value() == 6){
+                  Serial.println("Left 90 degrees");
+                  notificationCharacteristic.writeValue((byte)0x01);
+                  servo1.write(180);
+                  servo2.write(180);
+                  delay(code_speed*2);
+                  servo1.write(89);
+                  servo2.write(86);
+                  notificationCharacteristic.writeValue((byte)0x02);
+                  }
             }
         }
 

@@ -1940,9 +1940,13 @@ export class App extends React.Component<AppProps, AppState> {
                 this.interpreter.addCommandHandler('forward1', 'arduino',
                     this.arduinoDriver.forward.bind(this.arduinoDriver));
                 this.interpreter.addCommandHandler('left45', 'arduino',
-                    this.arduinoDriver.left.bind(this.arduinoDriver));
+                    this.arduinoDriver.left45.bind(this.arduinoDriver));
                 this.interpreter.addCommandHandler('right45', 'arduino',
-                    this.arduinoDriver.right.bind(this.arduinoDriver));
+                    this.arduinoDriver.right45.bind(this.arduinoDriver));
+				this.interpreter.addCommandHandler('left90', 'arduino',
+                    this.arduinoDriver.left90.bind(this.arduinoDriver));
+                this.interpreter.addCommandHandler('right90', 'arduino',
+                    this.arduinoDriver.right90.bind(this.arduinoDriver));
                 this.interpreter.addCommandHandler('backward1', 'arduino',
                     this.arduinoDriver.backward.bind(this.arduinoDriver));
             }
